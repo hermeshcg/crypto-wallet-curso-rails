@@ -1,3 +1,11 @@
+<p>
+    <%= link_to 'Idioma Português', '/?locale=pt-BR'%>
+</p>
+<p>
+    <%= link_to 'English', '/?locale=en'%>
+</p>
+
 <h1>Seja Bem Vindo ao <%= application_name %></h1>
-<p> Hoje é: <%= data_br(Date.today) %></p>
+<p> O idioma usado nessa aplicação é: <strong><%= locale %></strong> </p>
+<p> Hoje é: <%= I18n.l(Date.today) %></p>
 <%= render "menu" %> 
